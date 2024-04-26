@@ -1,11 +1,20 @@
 import { Link } from "react-router-dom";
-
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+import useAuth from "../Custom Hook/useAuth";
 const Navbar = () => {
+    const { user, LogOut } = useAuth();
+    const handleLogout = () => {
+        LogOut()
+            .then()
+            .catch(error => console.error(error))
+    }
     const links = <>
-    <li><Link to="/">Home</Link></li>
-    <li><Link to="/all">All Items</Link></li>
-    <li><Link to="/add">Add Items</Link></li>
-    <li><Link to="/myArt&Craft">My Art & Craft</Link></li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/all">All Items</Link></li>
+        <li><Link to="/register">register</Link></li>
+        <li><Link to="/add">Add Items</Link></li>
+        <li><Link to="/myArt&Craft">My Art & Craft</Link></li>
     </>
     return (
         <div className="navbar bg-base-100">
@@ -22,12 +31,19 @@ const Navbar = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 text-lg">
-                {links}
+                    {links}
                 </ul>
             </div>
-            <div className="navbar-end">
-                <Link to="/login" className="btn">Login</Link>
-            </div>
+            {
+                user ?
+                    <div className="navbar-end">
+                        <button onClick={handleLogout} className="btn">Log Out</button>
+                    </div> :
+                    <div className="navbar-end">
+                        <Link to="/login" className="btn">Login</Link>
+                    </div>
+            }
+            <ToastContainer />
         </div>
     );
 };
