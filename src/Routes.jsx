@@ -8,6 +8,7 @@ import Regiser from "./Components/Pages/Regiser";
 import AllItem from "./Components/Pages/AllItem";
 import AddItem from "./Components/Pages/AddItem";
 import MyArtCrafts from "./Components/Pages/MyArtCrafts";
+import Details from "./Components/Pages/Details";
 
 const router = createBrowserRouter([
     {
@@ -16,7 +17,13 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Home></Home>
+                element: <Home></Home>,
+                loader: () => fetch('/card.json')
+            },
+            {
+                path: '/card.json/:id',
+                element: <Details />,
+                loader: () => fetch('/card.json')
             },
             {
                 path: '/login',
@@ -28,7 +35,8 @@ const router = createBrowserRouter([
             },
             {
                 path: '/all',
-                element: <AllItem></AllItem>
+                element: <AllItem></AllItem>,
+                loader: () => fetch('/card.json')
             },
             {
                 path: '/add',

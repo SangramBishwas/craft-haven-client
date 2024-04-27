@@ -42,9 +42,9 @@ const Login = () => {
         .catch(error => console.log(error))
     }
     return (
-        <div>
+        <div className="mx-5 md:mx-10 lg:mx-20 py-24">
             <div className="flex md:flex-row flex-col shadow-2xl lg:my-10 justify-between rounded-2xl">
-                <div className="bg-lime-600 text-white p-5 md:p-20 md:space-y-10 space-y-5 w-full md:w-1/2 md:px-20 md:py-40 md:rounded-l-2xl rounded-t-2xl">
+                <div className="bg-lime-600 text-white p-5 md:p-20 md:space-y-10 space-y-5 w-full md:w-1/2 md:py-40 md:rounded-l-2xl rounded-t-2xl">
                     <h2 className="text-5xl font-semibold ">Hello Dear,</h2>
                     <p className="mb-10">Dear user/artist, if you do not have any account here and you want to login as well. please register first...</p>
                     <button className="btn text-lg bg-transparent hover:bg-green-700 text-white">

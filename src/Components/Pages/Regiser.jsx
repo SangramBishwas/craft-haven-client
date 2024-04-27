@@ -31,8 +31,8 @@ const Regiser = () => {
             .catch((error) => console.error(error))
     }
     return (
-        <div>
-            <div className="flex md:flex-row flex-col-reverse shadow-2xl lg:my-10 lg:pl-24 justify-between rounded-2xl">
+        <div className="mx-5 md:mx-10 lg:mx-20 py-24">
+            <div className="flex md:flex-row flex-col-reverse md:shadow-2xl lg:my-10 lg:pl-24 justify-between rounded-2xl shadow-2xl">
                 <div className="py-5 w-full md:w-1/2">
                     <h2 className="text-center text-3xl font-semibold">Register Now</h2>
                     <div className="card shrink-0 w-full max-w-sm  bg-base-100 mx-auto">
@@ -89,7 +89,7 @@ const Regiser = () => {
                         </form>
                     </div>
                 </div>
-                <div className="bg-lime-600 text-white p-5 md:p-20 md:space-y-10 space-y-5 w-full md:w-1/2 md:px-20 md:py-40 md:rounded-r-2xl rounded-t-2xl">
+                <div className="bg-lime-600 text-white p-5 md:p-20 md:space-y-10 space-y-5 w-full md:w-1/2 md:py-40 md:rounded-r-2xl rounded-t-2xl">
                     <h2 className="text-5xl font-semibold ">Hello Dear,</h2>
                     <p className="mb-10">Dear user/artist, if you are an already registered here and you have an account as well. please log in...</p>
                     <button className="btn text-lg bg-transparent hover:bg-green-700 text-white">
