@@ -32,8 +32,8 @@ const Details = () => {
                         <span> {artist}</span>
                     </div>
                     <div className="flex gap-2 font-semibold pb-3">
-                        <h3>processing time:</h3>
-                        <span> {time}</span>
+                        <h3>Duration:</h3>
+                        <span> {time} hours</span>
                     </div>
                     <p>{description}</p>
                     <div className="my-5 flex justify-center">

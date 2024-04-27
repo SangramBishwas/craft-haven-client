@@ -1,12 +1,13 @@
 import { Link, useLoaderData } from "react-router-dom";
 import Craft from "./Craft";
-
+import Slider from "../Slider";
 
 const Home = () => {
     const loadedCrafts = useLoaderData();
     const crafts = loadedCrafts.slice(0, 6);
     return (
         <div className="py-20">
+            <Slider />
             <div className="my-10 mx-5 md:mx-10 lg:mx-20">
                 <h2 className="font-bold text-2xl text-center">
                     Craft Items
