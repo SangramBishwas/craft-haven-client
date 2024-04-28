@@ -18,7 +18,7 @@ const Navbar = () => {
         <li onClick="Reload()" className="hover:underline"><NavLink className={({isActive}) => isActive ? "text-lime-500 font-bold" : "text-white"} to="/myArt&Craft">My Art & Craft</NavLink></li>
     </>
     return (
-        <div className="lg:px-20 navbar bg-base-content fixed z-50 text-white">
+        <div className="lg:pl-20 navbar bg-base-content fixed z-50 text-white">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

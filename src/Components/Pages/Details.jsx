@@ -3,8 +3,9 @@ import { useLoaderData, useParams } from "react-router-dom";
 
 const Details = () => {
     const crafts = useLoaderData();
+    console.log(crafts)
     const { id } = useParams();
-    const craft = crafts.find((item) => item._id === parseInt(id));
+    const craft = crafts.find((item) => item._id === id);
     const { name, artist, stock, price, image, rating, category, time, description } = craft;
     console.log(craft)
     return (
@@ -14,7 +15,7 @@ const Details = () => {
             </h2>
             <div className="flex gap-10 justify-between">
                 <div>
-                    <img className="" src={image} alt="" />
+                    <img className="w-full" src={image} alt="" />
                 </div>
                 <div className="bg-base-200 w-1/3 py-5 px-10">
                     <h3 className="text-lg border-b-2 pb-2">{category}</h3>

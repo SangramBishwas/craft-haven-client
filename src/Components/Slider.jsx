@@ -50,7 +50,7 @@ const Slider = () => {
                     <h1 className="font-extrabold text-4xl lg:text-7xl">Grow Your Bussiness</h1>
                     <p>The biggest platform site. here we can provide the best of best han made craft and also modern craft works like Ceramics and Pottery. <br />If you are an artist or you are a craft maker. So you add add your items.</p>
                     <button className='btn lg:text-lg font-bold'>
-                        <Link to="/add">All Items</Link>
+                        <Link to="/add">Add Items</Link>
                     </button>
                 </div>
             </SwiperSlide>

@@ -17,7 +17,7 @@ const Craft = ({ craft }) => {
                 </div>
                 <p>{description.slice(0, 120)}</p>
                 <div className="card-actions justify-end">
-                    <Link to={`/card.json/${_id}`}>
+                    <Link to={`/craft/${_id}`}>
                         <button className="btn btn-primary">View Details</button>
                     </Link>
                 </div>

@@ -1,6 +1,7 @@
 import { Link, useLoaderData } from "react-router-dom";
 import Craft from "./Craft";
 import Slider from "../Slider";
+import { Slide } from "react-awesome-reveal";
 
 const Home = () => {
     const loadedCrafts = useLoaderData();
@@ -13,13 +14,16 @@ const Home = () => {
                     Craft Items
                 </h2>
                 <p className="text-center mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque magnam asperiores facere iure mollitia enim unde ipsam architecto nihil? Eveniet!</p>
-                <div className="my-5 mx-auto gap-7 grid md:grid-cols-2 lg:grid-cols-3">
-                    {
-                        crafts.map((craft) => <Craft
-                            key={craft._id}
-                            craft={craft}></Craft>)
-                    }
-                </div>
+                <Slide direction="down" delay={1} duration={2000}>
+                    <div className="my-5 mx-auto gap-7 grid md:grid-cols-2 lg:grid-cols-3">
+                        {
+                            crafts.map((craft) => <Craft
+                                key={craft._id}
+                                craft={craft}></Craft>)
+                        }
+                    </div>
+                </Slide>
+
                 <div className="flex w-full justify-center my-10">
                     <Link className="" to="/all">
                         <button className="btn text-lg px-10">View All Items</button>

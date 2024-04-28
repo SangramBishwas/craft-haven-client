@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FaEye, FaEyeSlash, FaFacebook } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../Custom Hook/useAuth";
 import { toast } from "react-toastify";
 import { FcGoogle } from "react-icons/fc";
@@ -9,6 +9,8 @@ import { ImGithub } from "react-icons/im";
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
     const { userLogin, googleLogin, githubLogin, user } = useAuth();
+    const navigate = useNavigate();
+    const location = useLocation();
     console.log(user)
     const handleLogin = (e) => {
         e.preventDefault();
@@ -17,8 +19,9 @@ const Login = () => {
         const password = form.get('password');
         userLogin(email, password)
             .then(result => {
-                console.log(result.user);
+                console.log(result);
                 toast.success('Logged in successfully')
+                navigate(location?.state ? location.state : "/");
             })
             .catch(error => {
                 toast.error('Invalid email and password')
@@ -30,6 +33,7 @@ const Login = () => {
         .then((result) => {
             console.log(result.user);
             toast.success('Logged in successfully')
+            navigate(location?.state ? location.state : "/");
         })
         .catch(error => console.log(error))
     }
@@ -37,7 +41,8 @@ const Login = () => {
         githubLogin()
         .then((result) => {
             console.log(result.user);
-            toast.success('Logged in successfully')
+            toast.success('Logged in successfully');
+            navigate(location?.state ? location.state : "/");
         })
         .catch(error => console.log(error))
     }
