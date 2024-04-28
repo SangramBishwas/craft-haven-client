@@ -26,12 +26,13 @@ const AddItem = () => {
         const category = form.get('category');
         const image = form.get('image');
         const description = form.get('description');
+        const price = form.get('price');
         const time = form.get('time');
         const rating = form.get('rating');
         const customization = custom;
         const stock = status;
 
-        const newCraft = { artist, email, name, category, image, description, time, rating, customization, stock };
+        const newCraft = { artist, email, name, category, image, description, price, time, rating, customization, stock };
         console.log(newCraft);
 
         fetch('http://localhost:5000/craft', {

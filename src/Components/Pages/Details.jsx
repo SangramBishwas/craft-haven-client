@@ -14,7 +14,7 @@ const Details = () => {
                 Craft Details
             </h2>
             <div className="flex gap-10 justify-between">
-                <div>
+                <div className="w-2/3">
                     <img className="w-full" src={image} alt="" />
                 </div>
                 <div className="bg-base-200 w-1/3 py-5 px-10">

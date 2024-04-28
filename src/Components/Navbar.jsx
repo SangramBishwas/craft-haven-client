@@ -5,6 +5,7 @@ import useAuth from "../Custom Hook/useAuth";
 
 const Navbar = () => {
     const { user, LogOut } = useAuth();
+    console.log(user)
     const handleLogout = () => {
         LogOut()
             .then()
@@ -15,7 +16,7 @@ const Navbar = () => {
         <li onClick="Reload()" className="hover:underline"><NavLink className={({isActive}) => isActive ? "text-lime-500 font-bold" : "text-white"} to="/all">All Items</NavLink></li>
         <li onClick="Reload()" className="hover:underline"><NavLink className={({isActive}) => isActive ? "text-lime-500 font-bold" : "text-white"} to="/register">register</NavLink></li>
         <li onClick="Reload()" className="hover:underline"><NavLink className={({isActive}) => isActive ? "text-lime-500 font-bold" : "text-white"} to="/add">Add Items</NavLink></li>
-        <li onClick="Reload()" className="hover:underline"><NavLink className={({isActive}) => isActive ? "text-lime-500 font-bold" : "text-white"} to="/myArt&Craft">My Art & Craft</NavLink></li>
+        <li onClick="Reload()" className="hover:underline"><NavLink className={({isActive}) => isActive ? "text-lime-500 font-bold" : "text-white"} to="/myCraft">My Crafts</NavLink></li>
     </>
     return (
         <div className="lg:pl-20 navbar bg-base-content fixed z-50 text-white">

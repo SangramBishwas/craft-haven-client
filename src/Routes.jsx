@@ -7,14 +7,16 @@ import Login from "./Components/Pages/Login";
 import Regiser from "./Components/Pages/Regiser";
 import AllItem from "./Components/Pages/AllItem";
 import AddItem from "./Components/Pages/AddItem";
-import MyArtCrafts from "./Components/Pages/MyArtCrafts";
 import Details from "./Components/Pages/Details";
 import PrivateRoute from "./PrivateRoute";
+import MyCrafts from "./Components/Pages/MyCrafts";
+import Error from "./Components/Pages/Error";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Root />,
+        errorElement: <Error />,
         children: [
             {
                 path: '/',
@@ -44,9 +46,9 @@ const router = createBrowserRouter([
                 element: <PrivateRoute><AddItem /></PrivateRoute>
             },
             {
-                path: '/myArt&Craft',
-                element: <MyArtCrafts></MyArtCrafts>
-            },
+                path: '/myCraft',
+                element: <MyCrafts />
+            }
         ]
     },
 ]);

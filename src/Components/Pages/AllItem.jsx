@@ -26,7 +26,7 @@ const AllItem = () => {
                                 <td>{craft.category}</td>
                                 <td>{craft.artist}</td>
                                 <td>{craft.rating}</td>
-                                <td className="hover:underline"><Link to={`/card.json/${craft._id}`}>View Details</Link></td>
+                                <td className="hover:underline"><Link to={`/craft/${craft._id}`}>View Details</Link></td>
                             </tr>
 
                             )
