@@ -31,11 +31,15 @@ const Navbar = () => {
         <li onClick="Reload()" className="hover:underline"><NavLink className={({ isActive }) => isActive ? "text-lime-500 font-bold" : "text-white"} to="/">Home</NavLink></li>
         <li onClick="Reload()" className="hover:underline"><NavLink className={({ isActive }) => isActive ? "text-lime-500 font-bold" : "text-white"} to="/all">All Items</NavLink></li>
         <li onClick="Reload()" className="hover:underline"><NavLink className={({ isActive }) => isActive ? "text-lime-500 font-bold" : "text-white"} to="/register">register</NavLink></li>
-        <li onClick="Reload()" className="hover:underline"><NavLink className={({ isActive }) => isActive ? "text-lime-500 font-bold" : "text-white"} to="/add">Add Items</NavLink></li>
-        <li onClick="Reload()" className="hover:underline"><NavLink className={({ isActive }) => isActive ? "text-lime-500 font-bold" : "text-white"} to="/myCraft">My Crafts</NavLink></li>
+        {
+            user && <>
+                <li onClick="Reload()" className="hover:underline"><NavLink className={({ isActive }) => isActive ? "text-lime-500 font-bold" : "text-white"} to="/add">Add Items</NavLink></li>
+                <li onClick="Reload()" className="hover:underline"><NavLink className={({ isActive }) => isActive ? "text-lime-500 font-bold" : "text-white"} to="/myCraft">My Crafts</NavLink></li>
+            </>
+        }
     </>
     return (
-        <div className="lg:pl-20 navbar bg-base-content fixed z-50 text-white">
+        <div className="lg:pl-20 navbar bg-base-content shadow-xl fixed z-50 text-white">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

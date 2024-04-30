@@ -10,6 +10,7 @@ import slider2 from ".././assets/Slider2.jpg"
 import slider3 from ".././assets/Slider3.jpg"
 import { Link } from 'react-router-dom';
 
+import { Typewriter } from 'react-simple-typewriter';
 const Slider = () => {
 
     return (
@@ -27,7 +28,13 @@ const Slider = () => {
             <SwiperSlide>
                 <img className='h-[300px] lg:h-[650px] w-full relative' src={slider3} alt="banner" />
                 <div className='text-center text-white absolute top-10 left-6 lg:top-40 lg:left-64 space-y-3 lg:space-y-10'>
-                    <h1 className="font-extrabold text-4xl lg:text-7xl">Wellcome to CraftHaven</h1>
+                    <h1 className="font-extrabold text-4xl lg:text-7xl">
+                        <Typewriter
+                            words={['Welcome To CraftHaven']}
+                            loop={5}
+                            typeSpeed={50}
+                        />
+                    </h1>
                     <p>The biggest platform site. Where we can provide the best of best han made craft and also modern craft works like Ceramics and Pottery. <br />If you are here for the first time. You need to register.</p>
                     <button className='btn lg:text-lg font-bold'>
                         <Link to="/register">Register Now</Link>
