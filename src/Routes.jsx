@@ -49,7 +49,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/myCraft',
-                element: <MyCrafts />
+                element: <PrivateRoute><MyCrafts /></PrivateRoute>
             },
             {
                 path: '/update/:id',
