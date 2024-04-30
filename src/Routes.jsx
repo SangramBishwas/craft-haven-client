@@ -12,6 +12,7 @@ import PrivateRoute from "./PrivateRoute";
 import MyCrafts from "./Components/Pages/MyCrafts";
 import Error from "./Components/Pages/Error";
 import Update from "./Components/Pages/Update";
+import ACategory from "./ACategory";
 
 
 const router = createBrowserRouter([
@@ -29,6 +30,11 @@ const router = createBrowserRouter([
                 path: '/craft/:id',
                 element: <PrivateRoute><Details /></PrivateRoute>,
                 loader: () => fetch('http://localhost:5000/craft')
+            },
+            {
+                path: '/category/:category',
+                element: <PrivateRoute><ACategory /></PrivateRoute>,
+                loader: () => fetch('http://localhost:5000/category')
             },
             {
                 path: '/login',

@@ -30,6 +30,7 @@ const MyCrafts = () => {
 
     return (
         <div className="mx-5 md:mx-10 lg:mx-20 py-24">
+            <h2 className="text-center font-bold text-3xl">My Crafts</h2>
             <div className=" mt-6 w-full flex justify-end">
                 <details className="mx-auto dropdown dropdown-right">
                     <summary className="m-1 btn">Customization</summary>

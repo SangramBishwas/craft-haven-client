@@ -3,6 +3,7 @@ import Craft from "./Craft";
 import Slider from "../Slider";
 import { Slide } from "react-awesome-reveal";
 import Faq from "./Faq";
+import CategoryItem from "./CategoryItem";
 
 const Home = () => {
     const loadedCrafts = useLoaderData();
@@ -33,7 +34,7 @@ const Home = () => {
                 </div>
             </div>
             <Faq />
-
+            <CategoryItem />
 
         </div>
     );
