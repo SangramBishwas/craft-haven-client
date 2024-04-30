@@ -35,7 +35,7 @@ const Update = () => {
         const updateCraft = { artist, image, description, price, time, customization, stock };
         console.log(updateCraft);
 
-        fetch(`http://localhost:5000/craft/${_id}`, {
+        fetch(`https://assignment-10-server-ruby-nu.vercel.app/craft/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

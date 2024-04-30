@@ -24,17 +24,17 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/craft')
+                loader: () => fetch('https://assignment-10-server-ruby-nu.vercel.app/craft')
             },
             {
                 path: '/craft/:id',
                 element: <PrivateRoute><Details /></PrivateRoute>,
-                loader: () => fetch('http://localhost:5000/craft')
+                loader: () => fetch('https://assignment-10-server-ruby-nu.vercel.app/craft')
             },
             {
                 path: '/category/:category',
                 element: <PrivateRoute><ACategory /></PrivateRoute>,
-                loader: () => fetch('http://localhost:5000/category')
+                loader: () => fetch('https://assignment-10-server-ruby-nu.vercel.app/category')
             },
             {
                 path: '/login',
@@ -47,7 +47,7 @@ const router = createBrowserRouter([
             {
                 path: '/all',
                 element: <AllItem></AllItem>,
-                loader: () => fetch('http://localhost:5000/craft')
+                loader: () => fetch('https://assignment-10-server-ruby-nu.vercel.app/craft')
             },
             {
                 path: '/add',
@@ -60,7 +60,7 @@ const router = createBrowserRouter([
             {
                 path: '/update/:id',
                 element: <Update></Update>,
-                loader: ({params}) => fetch(`http://localhost:5000/craft/${params.id}`)
+                loader: ({ params }) => fetch(`https://assignment-10-server-ruby-nu.vercel.app/craft/${params.id}`)
             }
         ]
     },

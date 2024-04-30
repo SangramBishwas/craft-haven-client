@@ -18,7 +18,7 @@ const MyCraftDetails = ({ craft, custom, setCustom }) => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/craft/${id}`, {
+                fetch(`https://assignment-10-server-ruby-nu.vercel.app/craft/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

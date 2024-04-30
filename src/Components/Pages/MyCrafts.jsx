@@ -19,7 +19,7 @@ const MyCrafts = () => {
         }
     }
     useEffect(() => {
-        fetch(`http://localhost:5000/myCraft/${user?.email}`)
+        fetch(`https://assignment-10-server-ruby-nu.vercel.app/myCraft/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)

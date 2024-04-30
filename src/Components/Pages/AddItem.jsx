@@ -35,7 +35,7 @@ const AddItem = () => {
         const newCraft = { artist, email, name, category, image, description, price, time, rating, customization, stock };
         console.log(newCraft);
 
-        fetch('http://localhost:5000/craft', {
+        fetch('https://assignment-10-server-ruby-nu.vercel.app/craft', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
