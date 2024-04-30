@@ -3,14 +3,11 @@ import { FaStarHalfAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
-const MyCraftDetails = ({ craft }) => {
+const MyCraftDetails = ({ craft, custom, setCustom }) => {
     const { _id, name, image, price, rating, stock, customization } = craft;
     const handleDelete = (id) => {
         console.log('delete this craft', id);
-        fetch(`http://localhost:5000/craft/${id}`, {
-            method: 'DELETE'
-        })
-            .then(res => res.json())
+
         Swal.fire({
             title: "Are you sure?",
             text: "You won't be able to revert this!",
@@ -19,17 +16,29 @@ const MyCraftDetails = ({ craft }) => {
             confirmButtonColor: "#3085d6",
             cancelButtonColor: "#d33",
             confirmButtonText: "Yes, delete it!"
-        }).then((data) => {
-            console.log(data)
-            if (data.deletedCount > 0) {
-                Swal.fire({
-                    title: "Deleted!",
-                    text: "Your file has been deleted.",
-                    icon: "success"
-                });
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:5000/craft/${id}`, {
+                    method: 'DELETE'
+                })
+                    .then(res => res.json())
+                    .then((data) => {
+                        if (data.deletedCount > 0) {
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "Your file has been deleted.",
+                                icon: "success"
+                            });
+                            const remaining = custom.filter(item => item._id !== id);
+                            setCustom(remaining)
+                        }
+                    });
+
             }
         });
+
     }
+
     return (
         <div className="card flex-col lg:flex-row card-side bg-base-100 shadow-xl">
             <figure className='lg:w-1/2'><img className='lg:h-full ' src={image} alt="Movie" /></figure>
@@ -59,7 +68,9 @@ const MyCraftDetails = ({ craft }) => {
 };
 
 MyCraftDetails.propTypes = {
-    craft: PropTypes.object
+    craft: PropTypes.object,
+    custom: PropTypes.array,
+    setCustom: PropTypes.func
 };
 
 export default MyCraftDetails;

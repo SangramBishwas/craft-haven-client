@@ -45,6 +45,8 @@ const MyCrafts = () => {
                 {
                     custom.map((item) => <MyCraftDetails
                         key={item._id}
+                        custom={custom}
+                        setCustom={setCustom}
                         craft={item}></MyCraftDetails>)
                 }
             </div>
