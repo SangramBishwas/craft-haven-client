@@ -52,7 +52,7 @@ cd craft-haven-client
 
 ---
 ###2. Firebase configureation 
-// src/firebase.config.js
+/.env
 ```bash
 VITE_APIKEY= AIzaSyBBO-Em4eVW-yrGrKuO5UhXE2eXx-U_X8I
 VITE_AUTHDOMAIN= assignment-10-ebc0a.firebaseapp.com
