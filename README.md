@@ -36,14 +36,7 @@ https://guileless-paletas-0c0aff.netlify.app
 - React Hooks
 - Firebase Authentication
 
-# Project Title
-
-A brief description of your project, its purpose, and functionality.
-
-🔗 **Live Site**: [https://guileless-paletas-0c0aff.netlify.app](https://guileless-paletas-0c0aff.netlify.app)
-
 ---
-
 
 ## 🚀 Installation Process
 
