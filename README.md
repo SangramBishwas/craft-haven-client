@@ -47,3 +47,22 @@ Follow these steps to run the project locally:
 ```bash
 git clone https://github.com/SangramBishwas/craft-haven-client.git
 cd craft-haven-client
+
+```
+
+---
+###2. Firebase configureation 
+// src/firebase.config.js
+```bash
+VITE_APIKEY= AIzaSyBBO-Em4eVW-yrGrKuO5UhXE2eXx-U_X8I
+VITE_AUTHDOMAIN= assignment-10-ebc0a.firebaseapp.com
+VITE_PROJECTID= assignment-10-ebc0a
+VITE_STORAGEBUCKET= assignment-10-ebc0a.appspot.com
+VITE_MESSAGINGSENDERID= 174996659716
+VITE_APPID= 1:174996659716:web:b7793ed5e21c7c70ba1f51
+```
+### 3. Setup
+```bash
+npm install
+
+```
