@@ -51,7 +51,7 @@ cd craft-haven-client
 ```
 
 ---
-###2. Firebase configureation 
+### 2. Firebase configureation 
 /.env
 ```bash
 VITE_APIKEY= AIzaSyBBO-Em4eVW-yrGrKuO5UhXE2eXx-U_X8I
