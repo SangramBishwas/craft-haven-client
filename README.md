@@ -2,6 +2,23 @@
 
 https://guileless-paletas-0c0aff.netlify.app
 
+## 📸 Screenshots
+
+<!-- Replace with actual screenshots -->
+![Home Page](./screenshots/home.png)
+![Feature Page](./screenshots/feature.png)
+
+---
+
+## 🛠 Tech Stack
+
+- **Frontend**: React.js, Tailwind CSS
+- **Routing**: React Router
+- **Backend**: Firebase (Authentication, Firestore)
+- **Deployment**: Netlify
+
+---
+
 ## Packages
 
 -  React Awesome reveal
@@ -19,10 +36,21 @@ https://guileless-paletas-0c0aff.netlify.app
 - React Hooks
 - Firebase Authentication
 
+# Project Title
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A brief description of your project, its purpose, and functionality.
 
-Currently, two official plugins are available:
+🔗 **Live Site**: [https://guileless-paletas-0c0aff.netlify.app](https://guileless-paletas-0c0aff.netlify.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
+
+
+## 🚀 Installation Process
+
+Follow these steps to run the project locally:
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/SangramBishwas/craft-haven-client.git
+cd craft-haven-client
